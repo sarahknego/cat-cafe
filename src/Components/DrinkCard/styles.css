@@ -1,0 +1,13 @@
+.drink-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+    align-items: center;
+}
+
+.drink-name {
+    padding: 0;
+    margin: 0;
+    font-size: 23px;
+}

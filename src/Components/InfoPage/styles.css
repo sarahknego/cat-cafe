@@ -1,0 +1,31 @@
+.product {
+    display: flex;
+}
+
+.product-photo {
+    width: 100%;
+    max-width: 450px;
+    padding: 100px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-description {
+    padding-left: 0;
+    padding-right: 150px;
+    padding-bottom: 20px
+}
+
+.product-button {
+    color: var(--kcc-white);
+    background-color: var(--kcc-black);
+    border: 1px solid var(--kcc-black);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 122px;
+    padding: 6px 9px;
+}

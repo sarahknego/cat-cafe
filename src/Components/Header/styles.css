@@ -1,0 +1,57 @@
+nav {
+    display: flex;
+    gap: 20px;
+    background-color: var(--kcc-white);
+    padding: 20px 25px;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    font-family: var(--font-main);
+}
+
+nav a {
+  color: var(--kcc-black);
+  text-decoration: none;
+  transition: .3s ease-in-out;
+  font-size: 18px;
+}
+
+.logo {
+    padding: 5px 50px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 200px var(--nav-shadow);
+}
+
+.reserve-btn {
+    border: 1px solid var(--kcc-black);
+    border-radius: 8px;
+    padding: 6px 9px;
+}
+
+nav a:hover {
+    color: var(--kcc-purple);
+}
+
+.reserve-btn:hover {
+    border-color: var(--kcc-pink);
+    background-color: var(--kcc-pink);
+    color: var(--kcc-black);
+}

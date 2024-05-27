@@ -1,0 +1,43 @@
+.cat-card {
+    border: 1px solid var(--kcc-black);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.cat-photo {
+    border-radius: 15px;
+    padding: 7px;
+}
+
+.cat-breed, .cat-mood, .cat-name{
+    margin: 0;
+    padding: 0;
+}
+
+.cat-name {
+    font-size: 23;
+}
+
+.cat-breed, .cat-mood {
+    font-size: 18px;
+    color: var(--kcc-grey);
+}
+
+.breed-info, .mood-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.breed-info, .mood-info, .cat-name {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.mood-info {
+    padding-bottom: 10px;
+}

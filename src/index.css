@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --kcc-black: #000000;
+  --kcc-white: #FFFFFF;
+  --kcc-pink: #FEC7F2;
+  --kcc-purple: #9E6DAC;
+  --kcc-blue: #9EBDEC;
+  --kcc-light-blue: #CDEAFF;
+  --kcc-grey: #A5A5A5;
+  --font-header: cookies;
+  --font-main: varela-round;
+  --nav-shadow: #11111127;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: cookies;
+  src: url(./Cookies.woff2);
+}
+
+@font-face {
+  font-family: varela-round;
+  src: url(./VarelaRound-Regular[1].woff2);
+}
+
+html, body {
+  margin: 0;
 }
