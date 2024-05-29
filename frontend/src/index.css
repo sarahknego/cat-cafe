@@ -13,12 +13,12 @@
 
 @font-face {
   font-family: cookies;
-  src: url(./Cookies.woff2);
+  src: url(/src/fonts/Cookies.woff2);
 }
 
 @font-face {
   font-family: varela-round;
-  src: url(./VarelaRound-Regular[1].woff2);
+  src: url(/src/fonts/VarelaRound-Regular[1].woff2);
 }
 
 html, body {

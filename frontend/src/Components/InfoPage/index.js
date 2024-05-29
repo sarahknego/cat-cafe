@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import placeholderPhoto from "../../drink-placeholder.svg"
+import placeholderPhoto from "../../../src/images/drink-placeholder.svg"
 
 export default function InfoPage() {
     return (

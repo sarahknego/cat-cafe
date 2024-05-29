@@ -1,6 +1,6 @@
 import React from "react"
 import "./styles.css"
-import logo from "../../kcc-monochrome.svg"
+import logo from "../../../src/images/kcc-monochrome.svg"
 
 export default function Footer() {
     return (

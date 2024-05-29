@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles.css";
-import breedIcon from "../../breed-icon.svg";
-import moodIcon from "../../mood-icon.svg";
-import catPlaceholder from "../../cat-placeholder.svg"
+import breedIcon from "../../../src/images/breed-icon.svg";
+import moodIcon from "../../../src/images/mood-icon.svg";
+import catPlaceholder from "../../../src/images/cat-placeholder.svg"
 
 export default function CatCard() {
     return (

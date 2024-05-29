@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+import logo from './images/logo.svg';
 import './App.css';
-import heroImg from './kcc-hero-img.svg';
-import CatCard from "./Components/CatCard"
-import DrinkCard from './Components/DrinkCard';
-import InfoPage from './Components/InfoPage';
+import heroImg from './/images/kcc-hero-img.svg';
+import CatCard from ".//Components/CatCard"
+import DrinkCard from './/Components/DrinkCard';
+import InfoPage from './/Components/InfoPage';
 
 function App() {
   return (

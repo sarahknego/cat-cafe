@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import drinkPlaceholder from "../../drink-placeholder.svg"
+import drinkPlaceholder from "../../../src/images/drink-placeholder.svg"
 
 export default function DrinkCard() {
     return (

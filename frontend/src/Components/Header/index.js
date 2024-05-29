@@ -1,6 +1,6 @@
 import React from "react"
 import "./styles.css"
-import logo from "../../kitty-corner-cafe-logo.svg"
+import logo from "../../../src/images/kitty-corner-cafe-logo.svg"
  
 
 export default function Header() {
