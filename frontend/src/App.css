@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .hero {
   display: flex;
 }
@@ -22,6 +26,9 @@ h2 {
 p {
   font-family: var(--font-main);
   font-size: 24px;
+}
+
+.description-p {
   padding-left: 70px;
   padding-right: 50px;
 }
@@ -49,13 +56,146 @@ a {
 .welcome-cats {
   border: 1px solid var(--kcc-pink);
   border-radius: 8px;
-  padding: 6px 9px;
+  padding: 10px 25px;
   background-color: var(--kcc-pink);
+  color: var(--kcc-black);
 }
 
 .welcome-reserve {
   border: 1px solid var(--kcc-blue);
   border-radius: 8px;
-  padding: 6px 9px;
+  padding: 10px 25px;
   background-color: var(--kcc-blue);
+  color: var(--kcc-black);
+}
+
+.cat-cards {
+  display: flex;
+  position: relative;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 60px;
+  width: 100%;
+  max-width: 1200px;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+  gap: 30px;
+}
+
+.cat-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.arrow {
+  cursor: pointer;
+  padding: 15px;
+}
+
+.cats-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.see-cats {
+  padding-top: 15px;
+  border: 1px solid var(--kcc-pink);
+  border-radius: 8px;
+  background-color: var(--kcc-pink);
+  color: var(--kcc-black);
+  font-family: var(--font-main);
+  padding: 10px 25px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.description {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.drink-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  max-width: 900px;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+.drinks-section {
+  background-color: var(--kcc-light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.see-drinks {
+  padding-top: 15px;
+  border: 1px solid var(--kcc-blue);
+  border-radius: 8px;
+  background-color: var(--kcc-blue);
+  color: var(--kcc-black);
+  font-family: var(--font-main);
+  padding: 10px 25px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.rooms-section {
+  background-image: url(./images/rooms-background.svg);
+  width: 100%;
+  padding: 200px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rooms-info {
+  background-color: var(--kcc-white);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  padding: 100px 30px;
+}
+
+.rooms-headline {
+  margin: 20px;
+  text-align: center;
+  padding: 0px 50px;
+
+}
+
+.see-rooms {
+  padding-top: 15px;
+  font-size: 18px;
+  border: 1px solid var(--kcc-black);
+  border-radius: 8px;
+  background-color: var(--kcc-black);
+  color: var(--kcc-white);
+  font-family: var(--font-main);
+  padding: 10px 25px;
+}
+
+.welcome-cats:hover, .welcome-reserve:hover, .see-cats:hover, .see-drinks:hover, .see-rooms:hover {
+  background-color: var(--kcc-yellow);
+  border-color: var(--kcc-yellow);
+  color: var(--kcc-black);
+  transition: .3s ease-in-out;
 }

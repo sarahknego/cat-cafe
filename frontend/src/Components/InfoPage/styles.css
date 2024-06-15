@@ -25,7 +25,29 @@
     background-color: var(--kcc-black);
     border: 1px solid var(--kcc-black);
     border-radius: 8px;
-    width: 100%;
-    max-width: 122px;
-    padding: 6px 9px;
+    width: fit-content;
+    padding: 10px 25px;
+}
+
+.product-button:hover, .back-button:hover {
+    background-color: var(--kcc-yellow);
+    color: var(--kcc-black);
+    border-color: var(--kcc-yellow);
+    transition: .3s ease-in-out;
+}
+
+.back-button {
+    color: var(--kcc-white);
+    background-color: var(--kcc-black);
+    border: 1px solid var(--kcc-black);
+    border-radius: 8px;
+    width: fit-content;
+    padding: 10px 25px;
+    margin-left: 100px;
+}
+
+.info-page{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
 }

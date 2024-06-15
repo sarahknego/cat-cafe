@@ -1,17 +1,51 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import Cats from './Cats';
+import Drinks from './Drinks';
+import Rooms from './Rooms';
+import ItemPage from './ItemPage';
+import loaders from './loaders';
 import Header from './/Components/Header/index';
 import Footer from './/Components/Footer/index';
 import reportWebVitals from './reportWebVitals';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    loader: loaders.appLoader
+  },
+  {
+    path: "/:item/:id",
+    element: <ItemPage />,
+    loader: loaders.getResourceLoader
+  },
+  {
+    path: "/cats",
+    element: <Cats />,
+    loader: loaders.catsLoader
+  },
+  {
+    path: "/drinks",
+    element: <Drinks />,
+    loader: loaders.drinksLoader
+  },
+  {
+    path: "/rooms",
+    element: <Rooms />,
+    loader: loaders.roomsLoader
+  }
+])
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
-    <App />
-    <Footer />
+    <Header /> 
+    <RouterProvider router={router} />
+    <Footer /> 
   </React.StrictMode>
 );
 

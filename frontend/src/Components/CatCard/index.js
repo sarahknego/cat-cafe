@@ -2,25 +2,25 @@ import React from "react";
 import "./styles.css";
 import breedIcon from "../../../src/images/breed-icon.svg";
 import moodIcon from "../../../src/images/mood-icon.svg";
-import catPlaceholder from "../../../src/images/cat-placeholder.svg"
+import {Link} from "react-router-dom"
 
-export default function CatCard() {
+export default function CatCard({cat}) {
     return (
         <>
-            <div className="cat-card">
-                <img src={catPlaceholder} className="cat-photo" />
+            <Link to={"/cats/" + cat.id} className="cat-card">
+                <img src={cat.photo} className="cat-photo" />
                 <div className="cat-info" >
-                    <p className="cat-name">Henry</p>
+                    <p className="cat-name">{cat.name}</p>
                     <div className="breed-info">
                         <img src={breedIcon}  className="breed-icon" />
-                        <p className="cat-breed">Good boye</p>
+                        <p className="cat-breed">{cat.breed}</p>
                     </div>
                     <div className="mood-info">
                         <img src={moodIcon} className="mood-icon" />
-                        <p className="cat-mood">Chillin</p>
+                        <p className="cat-mood">{cat.temperment}</p>
                     </div>
                 </div>
-            </div>
+            </Link>
         </>
     )
 }

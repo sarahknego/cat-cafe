@@ -38,7 +38,7 @@ footer {
 .reserve-btn {
     border: 1px solid var(--kcc-black);
     border-radius: 8px;
-    padding: 6px 9px;
+    padding: 10px 25px;
 }
 
 nav a:hover {
@@ -62,12 +62,12 @@ nav a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 300px;
+    width: 350px;
 }
 
 .not-real {
     border: 1px solid var(--kcc-black);
-    padding: 6px 9px;
+    padding: 10px 25px;
     border-radius: 8px;
     background-color: var(--kcc-pink);
     font-size: 18px;

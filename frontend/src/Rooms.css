@@ -1,0 +1,30 @@
+.rooms-cards-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 900px;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+
+  .room-card:first-of-type {
+    grid-column: 1/3;
+  }
+
+  .room-card > img {
+    object-fit: cover;
+  }
+
+  .room-card:first-of-type > img {
+    aspect-ratio: 2/.95;
+  }
+
+.rooms-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rooms-page-title {
+    padding: 50px;
+}

@@ -1,0 +1,18 @@
+.cat-cards-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 50px;
+}
+
+.cats-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cats-page-title {
+    padding: 50px;
+}

@@ -1,6 +1,7 @@
 import React from "react"
 import "./styles.css"
 import logo from "../../../src/images/kitty-corner-cafe-logo.svg"
+import {Link} from "react-router-dom"
  
 
 export default function Header() {
@@ -13,7 +14,7 @@ export default function Header() {
                     <a href="/drinks">Drinks</a>
                     <a href="/rooms">Rooms</a>
                 </div>
-                <a href="/home"><img src={logo} className="logo" width="175px" /></a>
+                <a href="/"><img src={logo} className="logo" width="175px" /></a>
                 <a href="/reserve" className="reserve-btn">Make a Reservation</a>
             </nav>
         </header>

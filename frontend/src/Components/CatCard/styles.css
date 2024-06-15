@@ -1,11 +1,12 @@
 .cat-card {
-    border: 1px solid var(--kcc-black);
+    border: 1px solid var(--kcc-grey);
     border-radius: 15px;
     width: 100%;
-    max-width: 200px;
+    max-width: 275px;
     display: flex;
     flex-direction: column;
     align-items: left;
+    cursor: pointer;
 }
 
 .cat-photo {
@@ -40,4 +41,8 @@
 
 .mood-info {
     padding-bottom: 10px;
+}
+
+.breed-icon, .mood-icon {
+    padding-right: 7px;
 }

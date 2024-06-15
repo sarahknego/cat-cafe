@@ -1,6 +1,7 @@
 import React from "react"
 import "./styles.css"
 import logo from "../../../src/images/kcc-monochrome.svg"
+import {Link} from "react-router-dom"
 
 export default function Footer() {
     return (
@@ -14,7 +15,7 @@ export default function Footer() {
                     </div>
                     <div className="center">
                         <p className="not-real">Nothing on this website is real</p>
-                        <a href="/home"><img src={logo} className="mono-logo" width="175px" /></a>
+                        <a href="/"><img src={logo} className="mono-logo" width="175px" /></a>
                     </div> 
                     <a href="/reserve" className="reserve-btn">Make a Reservation</a>
                 </nav>

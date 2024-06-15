@@ -43,7 +43,7 @@ header {
 .reserve-btn {
     border: 1px solid var(--kcc-black);
     border-radius: 8px;
-    padding: 6px 9px;
+    padding: 10px 25px;
 }
 
 nav a:hover {
