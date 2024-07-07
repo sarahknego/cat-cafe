@@ -8,7 +8,7 @@ const cors = require("cors");
 const errorHandler = require("./errors/errorhandler.js")
 const corsOptions = { origin: 'http://localhost:3000' };
 
-app.options('*', cors())
+app.options('*', cors(corsOptions))
 app.use(cors());
 app.use(express.json());
 
