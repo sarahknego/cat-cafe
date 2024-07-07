@@ -7,16 +7,24 @@ import Cats from './Cats';
 import Drinks from './Drinks';
 import Rooms from './Rooms';
 import ItemPage from './ItemPage';
+import Reserve from './Reserve';
+import Reservations from './Reservations';
 import loaders from './loaders';
 import Header from './/Components/Header/index';
 import Footer from './/Components/Footer/index';
 import reportWebVitals from './reportWebVitals';
+import ReservationPage from './ReservationPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     loader: loaders.appLoader
+  },
+  {
+    path: "/reservations/:id",
+    element: <ReservationPage />,
+    loader: loaders.getResourceLoader
   },
   {
     path: "/:item/:id",
@@ -37,6 +45,15 @@ const router = createBrowserRouter([
     path: "/rooms",
     element: <Rooms />,
     loader: loaders.roomsLoader
+  },
+  {
+    path: "/reserve",
+    element: <Reserve />
+  },
+  {
+    path: "/reservations",
+    element: <Reservations />,
+    loader: loaders.reservationsLoader
   }
 ])
 

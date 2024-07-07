@@ -1,0 +1,113 @@
+.reservation-page {
+    background-color: var(--kcc-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation-form {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.make-reservation {
+    color: var(--kcc-white);
+    margin-top: 50px;
+}
+
+.about-you {
+    margin-top: 50px;
+}
+
+.about-you, .reserve-details, .reservation-time {
+    background-color: rgba(255, 255, 255, .75);
+    color: var(--kcc-dark-purple);
+    border: 2px solid var(--kcc-black);
+    border-radius: 20px!important;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    gap: 10px;
+}
+
+input {
+    font-family: var(--font-main);
+}
+
+input::placeholder {
+    color: var(--kcc-black);
+}
+
+input, select {
+    padding: 15px;
+    border: 2px solid var(--kcc-black);
+    border-radius: 10px;
+    background-color: var(--kcc-white);
+    width: 100%;
+    max-width: 500px;
+    font-size: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.date-picker {
+    width: 466px;
+}
+
+.dropdown-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    right: 20px;
+    z-index: 2;
+    pointer-events: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.selectors {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+option, select {
+    font-size: 18px;
+    font-family: var(--font-main);
+}
+
+.submit-button {
+    margin-bottom: 100px;
+    appearance: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: var(--kcc-yellow);
+    border-color: var(--kcc-yellow);
+    color: var(--kcc-black);
+}

@@ -59,6 +59,7 @@ a {
   padding: 10px 25px;
   background-color: var(--kcc-pink);
   color: var(--kcc-black);
+  transition: .3s ease-in-out;
 }
 
 .welcome-reserve {
@@ -67,6 +68,7 @@ a {
   padding: 10px 25px;
   background-color: var(--kcc-blue);
   color: var(--kcc-black);
+  transition: .3s ease-in-out;
 }
 
 .cat-cards {
@@ -116,6 +118,7 @@ a {
   padding: 10px 25px;
   margin-bottom: 30px;
   font-size: 18px;
+  transition: .3s ease-in-out;
 }
 
 .description {
@@ -152,6 +155,7 @@ a {
   padding: 10px 25px;
   margin-bottom: 30px;
   font-size: 18px;
+  transition: .3s ease-in-out;
 }
 
 .rooms-section {
@@ -191,11 +195,11 @@ a {
   color: var(--kcc-white);
   font-family: var(--font-main);
   padding: 10px 25px;
+  transition: .3s ease-in-out;
 }
 
 .welcome-cats:hover, .welcome-reserve:hover, .see-cats:hover, .see-drinks:hover, .see-rooms:hover {
   background-color: var(--kcc-yellow);
   border-color: var(--kcc-yellow);
   color: var(--kcc-black);
-  transition: .3s ease-in-out;
 }

@@ -2,11 +2,16 @@
   --kcc-black: #000000;
   --kcc-white: #FFFFFF;
   --kcc-pink: #FEC7F2;
-  --kcc-purple: #9E6DAC;
+  --kcc-purple: #BC90E4;
+  --kcc-dark-purple: #7839B0;
   --kcc-blue: #9EBDEC;
   --kcc-light-blue: #CDEAFF;
   --kcc-grey: #A5A5A5;
   --kcc-yellow: #FFD586;
+  --link-blue: #2C80FF;
+  --link-border: #0046B0;
+  --delete-main: #FF0000;
+  --delete-background: #FFECEC;
   --font-header: cookies;
   --font-main: varela-round;
   --nav-shadow: #11111127;

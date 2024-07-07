@@ -1,0 +1,69 @@
+.reservation-card {
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid var(--kcc-black);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 20px 30px;
+}
+
+hr {
+    width: 475px;
+    background-color: var(--kcc-grey);
+    height: 1px;
+    border: 1px solid var(--kcc-grey)
+}
+
+.personal-info, .reservation-specifics, .when-how-long {
+    padding: 5px;
+}
+
+.personal-info p, .reservation-specifics p, .when-how-long p {
+    font-size: 18px;
+}
+
+.reservation-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.change {
+    color: var(--link-blue);
+}
+
+button, .view-reservation {
+    appearance: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.delete-button {
+    color: var(--delete-main);
+    border-color: var(--delete-main);
+    background-color: var(--delete-background);
+}
+
+.view-reservation, .save-changes-button {
+    color: var(--kcc-white);
+    background-color: var(--link-blue);
+    border-color: var(--link-border);
+}
+
+.edit-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.editing-buttons {
+    display: flex;
+    gap: 50px;
+}
+
+input {
+    max-width: 466px;
+}
