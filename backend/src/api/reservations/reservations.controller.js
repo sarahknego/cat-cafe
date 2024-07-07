@@ -13,6 +13,7 @@ async function read(req, res) {
 }
 
 async function destroy(req, res, next) {
+    console.log(`Received request: ${req.method} ${req.path}`);
     if (!req.body.reservation_id) {
         return next({status: 400, message: "reservation_id not found"})
     }

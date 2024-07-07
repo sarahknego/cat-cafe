@@ -6,10 +6,14 @@ const roomsRouter = require('./rooms/rooms.router.js')
 const reservationsRouter = require('./reservations/reservations.router.js')
 const cors = require("cors");
 const errorHandler = require("./errors/errorhandler.js")
-const corsOptions = { origin: 'http://localhost:3000' };
 
-app.options('*', cors(corsOptions))
-app.use(cors({ origin: '*', methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'], allowedHeaders: ['Content-Type', 'Authorization'] }));
+const corsOptions = { origin: '*', methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'], allowedHeaders: ['Content-Type', 'Authorization'] };
+
+app.options('*', cors(corsOptions), (req, res)=>{
+    console.log("Preflight request!")
+    res.sendStatus(204)
+})
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/cats", catsRouter);
