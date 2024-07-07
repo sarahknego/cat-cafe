@@ -7,13 +7,8 @@ const reservationsRouter = require('./reservations/reservations.router.js')
 const cors = require("cors");
 const errorHandler = require("./errors/errorhandler.js")
 
-// let corsOptions {
-//     origin: "http://localhost:3000",
-//     optionsSuccessStatus: 200
-// }
-
-// app.use(cors(corsOptions));
 app.options('*', cors())
+app.use(cors());
 app.use(express.json());
 
 app.use("/cats", catsRouter);
