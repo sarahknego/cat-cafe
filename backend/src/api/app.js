@@ -9,7 +9,7 @@ const errorHandler = require("./errors/errorhandler.js")
 const corsOptions = { origin: 'http://localhost:3000' };
 
 app.options('*', cors(corsOptions))
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/cats", catsRouter);
