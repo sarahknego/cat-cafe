@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import {Link} from "react-router-dom";
+import {Link, Form} from "react-router-dom";
 import editButton from "../../../src/images/edit-button.svg"
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
@@ -46,29 +46,20 @@ export default function ReservationCard({reservation, viewing}) {
         getRoom(reservation.room_id).then((response) => setRoom(response.data))
          }, []);
 
-    async function onDelete() {
-        let result = await fetch(`https://cat-cafe-010s.onrender.com/reservations`, {
-            body: JSON.stringify({reservation_id: `${reservation.id}`}),
-            method: "DELETE"
-        })
-        console.log(result)
-        return result
-    }
-
-
     return (
         <>
             <div className="reservation-card">
                 <div> 
-                    <div className="reservation-line">
+                    <Form className="reservation-line" method="delete" action="/reservations">
+                        <input type="number" name="reservation_id" value={reservation.id} style={{display: "none"}}/>
                         <p>{"Reservation " + reservation.id}</p>
-                        {isEditing ? (<button className="delete-button" onClick={onDelete}>Delete</button>) : 
+                        {isEditing ? (<button className="delete-button" name="intent" value="delete">Delete</button>) : 
                         viewing ? (<a href="/reservations" className="back-button">Go Back</a>) :
                         (<a href={"/reservations/" + reservation.id} className="view-reservation">View Reservation</a>)}
-                    </div>
+                    </Form>
                     {isEditing ? 
                     (
-                        <div className="reservation-form">
+                        <Form className="reservation-form">
                             <div className="selectors">
                                     <input type="text" placeholder={reservation.name} required />
                                     <input type="email" placeholder={reservation.email} required />
@@ -147,7 +138,7 @@ export default function ReservationCard({reservation, viewing}) {
                                     </select>
                             </div>
                             </div>
-                        </div>
+                        </Form>
                     ) : 
                     (
                         <div className="reservation-wrapper">

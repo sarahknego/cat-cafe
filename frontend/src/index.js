@@ -15,6 +15,36 @@ import Footer from './/Components/Footer/index';
 import reportWebVitals from './reportWebVitals';
 import ReservationPage from './ReservationPage';
 
+async function deleteReservation(id) {
+  let result = await fetch(`https://cat-cafe-010s.onrender.com/reservations/`, {
+    body: JSON.stringify({"reservation_id" : Number(id)}),
+    method: "DELETE",
+    headers: {"Content-Type" : "application/json"}
+})
+  return result.status
+  //200
+}
+
+async function editReservation(id){
+  //TODO: Write a PATCH fetch! 
+  return "🙃"
+}
+
+async function deleteAction({request}) {
+  let formData = await request.formData();
+  let intent = formData.get("intent");
+  let id = formData.get("reservation_id")
+
+  if(intent === "delete"){
+    return deleteReservation(id)
+  } if(intent == "edit"){
+    return editReservation(id)
+  }else {
+    return null
+  }
+}
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,7 +83,8 @@ const router = createBrowserRouter([
   {
     path: "/reservations",
     element: <Reservations />,
-    loader: loaders.reservationsLoader
+    loader: loaders.reservationsLoader,
+    action: deleteAction
   }
 ])
 
