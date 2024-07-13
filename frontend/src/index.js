@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, redirect } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Cats from './Cats';
@@ -14,6 +14,7 @@ import Header from './/Components/Header/index';
 import Footer from './/Components/Footer/index';
 import reportWebVitals from './reportWebVitals';
 import ReservationPage from './ReservationPage';
+import dayjs from 'dayjs';
 
 async function deleteReservation(id) {
   let result = await fetch(`https://cat-cafe-010s.onrender.com/reservations/`, {
@@ -25,23 +26,52 @@ async function deleteReservation(id) {
   //200
 }
 
-async function editReservation(id){
-  //TODO: Write a PATCH fetch! 
-  return "🙃"
+async function editReservation(formData){
+  let result = await fetch(`http://localhost:5000/reservations/`, {
+    body: JSON.stringify(formData),
+    method: "PUT",
+    headers: {"Content-Type" : "application/json"}
+})
+  return result.status
 }
 
-async function deleteAction({request}) {
+async function submitReservation(formData) {
+  let result = await fetch(`http://localhost:5000/reservations/`, {
+    body: JSON.stringify(formData),
+    method: "POST",
+    headers: {"Content-Type" : "application/json"}
+})
+  return redirect("/reservations")
+}
+
+async function formAction({request}) {
   let formData = await request.formData();
   let intent = formData.get("intent");
+  
   let id = formData.get("reservation_id")
-
+  
   if(intent === "delete"){
     return deleteReservation(id)
   } if(intent == "edit"){
-    return editReservation(id)
-  }else {
-    return null
+
+
+    let data = Object.fromEntries(formData.entries())
+    console.warn("DATA", data)
+   
+    // Make this a timestamp string that looks like '2024-04-13 10:30:00'
+
+   let submission = JSON.parse(data.formData)
+    return editReservation(submission)
   }
+    return null
+}
+
+async function submitForm({request}) {
+  let formData = await request.formData();
+  let data = Object.fromEntries(formData.entries())
+  let submission = JSON.parse(data.formData)
+
+  return submitReservation(submission)
 }
 
 
@@ -78,13 +108,14 @@ const router = createBrowserRouter([
   },
   {
     path: "/reserve",
-    element: <Reserve />
+    element: <Reserve />,
+    action: submitForm
   },
   {
     path: "/reservations",
     element: <Reservations />,
     loader: loaders.reservationsLoader,
-    action: deleteAction
+    action: formAction
   }
 ])
 

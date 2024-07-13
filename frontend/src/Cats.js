@@ -5,7 +5,7 @@ import "./Cats.css"
 
 export default function Cats() {
     const data = useLoaderData()
-    console.log(data)
+    // console.log(data)
     return(
         <>
         <div className="cats-page">

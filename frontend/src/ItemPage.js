@@ -5,7 +5,7 @@ import './ItemPage.css'
 
 export default function ItemPage() {
     const data = useLoaderData()
-    console.log(data)
+    // console.log(data)
     return(
         <InfoPage props={data}/>
     )

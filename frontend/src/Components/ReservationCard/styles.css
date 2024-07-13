@@ -57,6 +57,7 @@ button, .view-reservation {
 .edit-button {
     cursor: pointer;
     position: relative;
+    margin: auto, 0px, auto, auto
 }
 
 .editing-buttons {

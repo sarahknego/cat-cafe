@@ -6,6 +6,8 @@ router.route("/:id")
 
 router.route("/")
 .get(controller.list)
+.put(controller.put)
+.post(controller.post)
 .delete(controller.delete);
 
 module.exports = router;

@@ -1,11 +1,14 @@
-import React from "react";
-import {useLoaderData, Link} from "react-router-dom"
+import {useState} from "react";
+import {useLoaderData, useActionData, Link} from "react-router-dom"
 import ReservationCard from "./Components/ReservationCard"
 import "./Reservations.css"
 
-export default function Reservations() {
+export default function Reservations({editingCard}) {
     const data = useLoaderData()
-    console.log(data.data)
+    const status = useActionData()
+    data.data.sort((a, b) => a.id - b.id)
+    console.log(status)
+    // console.log(data.data)
     return(
         <>
             <div className="reservations-page">
@@ -13,7 +16,7 @@ export default function Reservations() {
                 <div className="reservations-cards-wrapper">
                     {data?.data.length ? <div className="reservations-cards-page" >
                     {data.data.map((item) => (
-                        <ReservationCard reservation={item} key={item.id} />
+                        <ReservationCard reservation={item} key={item.id} status={status}/>
                     ))}
                     </div> : (<p>Loading reservations...</p>)}
                 </div>

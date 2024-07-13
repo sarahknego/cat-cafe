@@ -13,7 +13,6 @@ async function read(req, res) {
 }
 
 async function destroy(req, res, next) {
-    console.log(`Received request: ${req.method} ${req.path}`);
     if (!req.body.reservation_id) {
         return next({status: 400, message: "reservation_id not found"})
     }
@@ -28,4 +27,25 @@ async function destroy(req, res, next) {
     res.send("reservation deleted successfully").status(200)
 }
 
-module.exports = {list : asyncErrorBoundary(list), read : asyncErrorBoundary(read), delete : asyncErrorBoundary(destroy) };
+async function put(req, res, next){
+    if(req.body){
+        let id = req.body.id;
+        req.body = {...req.body, "length_hours": Number(req.body.length_hours)}
+        const data = await service.put(id, req.body)
+        res.sendStatus(200)
+    } else {
+        return next({status: 400, message: "Something isn't right"})
+    }
+}
+
+async function post(req, res, next){
+    if(req.body){
+        req.body = {...req.body, "length_hours": Number(req.body.length_hours)}
+        const data = await service.post(req.body)
+        res.sendStatus(200)
+    } else {
+        return next({status: 400, message: "Something isn't right"})
+    }
+}
+
+module.exports = {list : asyncErrorBoundary(list), read : asyncErrorBoundary(read), delete : asyncErrorBoundary(destroy), put: asyncErrorBoundary(put), post: asyncErrorBoundary(post)};

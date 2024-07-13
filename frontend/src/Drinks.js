@@ -5,7 +5,7 @@ import "./Drinks.css"
 
 export default function Drinks() {
     const data = useLoaderData()
-    console.log(data)
+    // console.log(data)
     return(
         <>
             <div className="drinks-page">
