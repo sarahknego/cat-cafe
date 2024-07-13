@@ -3,7 +3,6 @@ import "./styles.css";
 import {Link} from "react-router-dom"
 
 export default function RoomCard({room}) {
-    // console.log(room.id)
     return (
         <>
             <Link to={"/rooms/" + room.id} className="room-card">

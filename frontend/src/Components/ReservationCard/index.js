@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
-import {Link, Form} from "react-router-dom";
-import editButton from "../../../src/images/edit-button.svg"
+import {Form} from "react-router-dom";
+import editButton from "../../../src/images/edit-button.svg";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import DatePicker from "react-datepicker";
@@ -23,13 +23,10 @@ export default function ReservationCard({reservation, viewing, status}) {
         }
          }, [status]);
 
-    //State for the form: 
     const [formData, setFormData] = useState(reservation)
 
 
     const currentDate = (date) => new Date() < date;
-    // console.log(reservation, "reservation card")
-    // console.log(cat, "cat")
 
     async function getCat(cat) {
         let result = await fetch(`https://cat-cafe-010s.onrender.com/cats/${formData.cat_id}`)
@@ -221,4 +218,4 @@ export default function ReservationCard({reservation, viewing, status}) {
             </div>
         </>
     )
-}
+};

@@ -1,7 +1,6 @@
-import React from "react"
-import "./styles.css"
-import logo from "../../../src/images/kcc-monochrome.svg"
-import {Link} from "react-router-dom"
+import React from "react";
+import "./styles.css";
+import logo from "../../../src/images/kcc-monochrome.svg";
 
 export default function Footer() {
     return (
@@ -22,4 +21,4 @@ export default function Footer() {
             </footer>
         </>
     )
-}
+};

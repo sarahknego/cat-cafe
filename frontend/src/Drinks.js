@@ -1,11 +1,10 @@
 import React from "react";
-import {useLoaderData, Link} from "react-router-dom"
-import DrinkCard from ".//Components/DrinkCard"
-import "./Drinks.css"
+import {useLoaderData} from "react-router-dom";
+import DrinkCard from ".//Components/DrinkCard";
+import "./Drinks.css";
 
 export default function Drinks() {
-    const data = useLoaderData()
-    // console.log(data)
+    const data = useLoaderData();
     return(
         <>
             <div className="drinks-page">
@@ -20,4 +19,4 @@ export default function Drinks() {
             </div>
         </>
     )
-}
+};

@@ -24,7 +24,7 @@ async function deleteReservation(id) {
 })
   return result.status
   //200
-}
+};
 
 async function editReservation(formData){
   let result = await fetch(`http://localhost:5000/reservations/`, {
@@ -33,7 +33,7 @@ async function editReservation(formData){
     headers: {"Content-Type" : "application/json"}
 })
   return result.status
-}
+};
 
 async function submitReservation(formData) {
   let result = await fetch(`http://localhost:5000/reservations/`, {
@@ -42,36 +42,33 @@ async function submitReservation(formData) {
     headers: {"Content-Type" : "application/json"}
 })
   return redirect("/reservations")
-}
+};
 
 async function formAction({request}) {
   let formData = await request.formData();
   let intent = formData.get("intent");
   
-  let id = formData.get("reservation_id")
+  let id = formData.get("reservation_id");
   
   if(intent === "delete"){
-    return deleteReservation(id)
+    return deleteReservation(id);
   } if(intent == "edit"){
 
 
     let data = Object.fromEntries(formData.entries())
-    console.warn("DATA", data)
-   
-    // Make this a timestamp string that looks like '2024-04-13 10:30:00'
 
-   let submission = JSON.parse(data.formData)
-    return editReservation(submission)
+   let submission = JSON.parse(data.formData);
+    return editReservation(submission);
   }
-    return null
-}
+    return null;
+};
 
 async function submitForm({request}) {
   let formData = await request.formData();
-  let data = Object.fromEntries(formData.entries())
-  let submission = JSON.parse(data.formData)
+  let data = Object.fromEntries(formData.entries());
+  let submission = JSON.parse(data.formData);
 
-  return submitReservation(submission)
+  return submitReservation(submission);
 }
 
 
@@ -117,7 +114,7 @@ const router = createBrowserRouter([
     loader: loaders.reservationsLoader,
     action: formAction
   }
-])
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

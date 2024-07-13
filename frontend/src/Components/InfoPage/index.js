@@ -29,4 +29,4 @@ export default function InfoPage({props}) {
             </div>
         </div> 
     )
-}
+};

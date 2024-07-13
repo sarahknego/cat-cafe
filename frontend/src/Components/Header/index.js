@@ -1,7 +1,6 @@
-import React from "react"
-import "./styles.css"
-import logo from "../../../src/images/kitty-corner-cafe-logo.svg"
-import {Link} from "react-router-dom"
+import React from "react";
+import "./styles.css";
+import logo from "../../../src/images/kitty-corner-cafe-logo.svg";
  
 
 export default function Header() {
@@ -20,4 +19,4 @@ export default function Header() {
         </header>
         </>
     )
-}
+};

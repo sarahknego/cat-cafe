@@ -1,6 +1,6 @@
 // Update with your config settings.
-require("dotenv").config()
-const {DATABASE_URL} = process.env
+require("dotenv").config();
+const {DATABASE_URL} = process.env;
 
 const path = require("path");
 

@@ -1,11 +1,10 @@
 import React from "react";
-import {useLoaderData, Link} from "react-router-dom"
-import CatCard from ".//Components/CatCard"
-import "./Cats.css"
+import {useLoaderData, Link} from "react-router-dom";
+import CatCard from ".//Components/CatCard";
+import "./Cats.css";
 
 export default function Cats() {
-    const data = useLoaderData()
-    // console.log(data)
+    const data = useLoaderData();
     return(
         <>
         <div className="cats-page">
@@ -20,4 +19,4 @@ export default function Cats() {
           </div>
         </>
     )
-}
+};

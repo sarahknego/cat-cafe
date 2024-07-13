@@ -1,14 +1,12 @@
-import {useState} from "react";
-import {useLoaderData, useActionData, Link} from "react-router-dom"
-import ReservationCard from "./Components/ReservationCard"
-import "./Reservations.css"
+import {useLoaderData, useActionData, Link} from "react-router-dom";
+import ReservationCard from "./Components/ReservationCard";
+import "./Reservations.css";
 
 export default function Reservations({editingCard}) {
-    const data = useLoaderData()
-    const status = useActionData()
-    data.data.sort((a, b) => a.id - b.id)
-    console.log(status)
-    // console.log(data.data)
+    const data = useLoaderData();
+    const status = useActionData();
+    data.data.sort((a, b) => a.id - b.id);
+    console.log(status);
     return(
         <>
             <div className="reservations-page">
@@ -18,9 +16,9 @@ export default function Reservations({editingCard}) {
                     {data.data.map((item) => (
                         <ReservationCard reservation={item} key={item.id} status={status}/>
                     ))}
-                    </div> : (<p>Loading reservations...</p>)}
+                    </div> : (<p>Loading reservations...</p>)};
                 </div>
             </div>
         </>
     )
-}
+};

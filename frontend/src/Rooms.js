@@ -1,11 +1,10 @@
 import React from "react";
-import {useLoaderData, Link} from "react-router-dom"
-import RoomCard from ".//Components/RoomCard"
-import "./Rooms.css"
+import {useLoaderData} from "react-router-dom";
+import RoomCard from ".//Components/RoomCard";
+import "./Rooms.css";
 
 export default function Rooms() {
-    const data = useLoaderData()
-    // console.log(data)
+    const data = useLoaderData();
     return(
         <>
             <div className="rooms-page">
@@ -20,4 +19,4 @@ export default function Rooms() {
             </div>
         </>
     )
-}
+};

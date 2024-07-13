@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import breedIcon from "../../../src/images/breed-icon.svg";
 import moodIcon from "../../../src/images/mood-icon.svg";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 
 export default function CatCard({cat}) {
     return (
@@ -23,4 +23,4 @@ export default function CatCard({cat}) {
             </Link>
         </>
     )
-}
+};

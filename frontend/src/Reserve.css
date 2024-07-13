@@ -50,7 +50,7 @@ input::placeholder {
     color: var(--kcc-black);
 }
 
-input, select {
+input, select, .to-reservations {
     padding: 15px;
     border: 2px solid var(--kcc-black);
     border-radius: 10px;
@@ -100,13 +100,26 @@ option, select {
 }
 
 .submit-button {
-    margin-bottom: 100px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.submit-button, .to-reservations {
+    margin-bottom: 50px;
     appearance: none;
     cursor: pointer;
     transition: .3s ease-in-out;
 }
 
-.submit-button:hover {
+.to-reservations {
+    background-color: var(--kcc-black);
+    color: var(--kcc-white);
+    width: 100%;
+    max-width: 466px;
+    text-align: center;
+}
+
+.submit-button:hover , .to-reservations:hover {
     background-color: var(--kcc-yellow);
     border-color: var(--kcc-yellow);
     color: var(--kcc-black);

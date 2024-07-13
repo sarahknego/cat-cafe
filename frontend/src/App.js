@@ -6,12 +6,12 @@ import CatCard from ".//Components/CatCard"
 import DrinkCard from './/Components/DrinkCard';
 import prev from './images/prev.svg';
 import next from './images/next.svg';
-import {useLoaderData, Link} from "react-router-dom"
+import {useLoaderData} from "react-router-dom";
 
 function App() {
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const carousel = useRef(null)
-  const data = useLoaderData()
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const carousel = useRef(null);
+  const data = useLoaderData();
   return (
     <>
       <div className="hero">
