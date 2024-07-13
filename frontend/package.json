@@ -1,4 +1,7 @@
 {
+  "name": "cat-cafe",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -16,16 +19,34 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "name": "frontend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "start npm run backend && start npm run frontend",
+    "backend": "npm --prefix ./backend start",
+    "frontend": "npm --prefix ./frontend start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "author": "sarah knego",
-  "license": "ISC"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.1"
+  }
 }
