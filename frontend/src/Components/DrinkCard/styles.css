@@ -14,4 +14,7 @@
 .drink-photo {
     width: 100%;
     border-radius: 15px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
 }

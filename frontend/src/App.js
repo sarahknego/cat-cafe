@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import logo from './images/logo.svg';
 import './App.css';
-import heroImg from './/images/kcc-hero-img.svg';
+import heroImg from './/images/kcc-opener.svg';
 import CatCard from ".//Components/CatCard"
 import DrinkCard from './/Components/DrinkCard';
 import prev from './images/prev.svg';

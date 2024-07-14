@@ -16,7 +16,8 @@
   }
 
   .room-card:first-of-type > img {
-    aspect-ratio: 2/.95;
+    height: 300px;
+    width: 430px;
   }
 
 .rooms-page {

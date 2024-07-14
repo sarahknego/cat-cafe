@@ -62,6 +62,7 @@ button, .view-reservation {
 
 .editing-buttons {
     display: flex;
+    justify-content: right;
     gap: 50px;
 }
 
