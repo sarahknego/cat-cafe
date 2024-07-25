@@ -27,7 +27,7 @@ async function deleteReservation(id) {
 };
 
 async function editReservation(formData){
-  let result = await fetch(`http://localhost:5000/reservations/`, {
+  let result = await fetch(`https://cat-cafe-010s.onrender.com/reservations/`, {
     body: JSON.stringify(formData),
     method: "PUT",
     headers: {"Content-Type" : "application/json"}
@@ -36,7 +36,7 @@ async function editReservation(formData){
 };
 
 async function submitReservation(formData) {
-  let result = await fetch(`http://localhost:5000/reservations/`, {
+  let result = await fetch(`https://cat-cafe-010s.onrender.com/reservations/`, {
     body: JSON.stringify(formData),
     method: "POST",
     headers: {"Content-Type" : "application/json"}
