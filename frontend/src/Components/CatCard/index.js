@@ -8,15 +8,15 @@ export default function CatCard({cat}) {
     return (
         <>
             <Link to={"/cats/" + cat.id} className="cat-card">
-                <img src={cat.photo} className="cat-photo" />
+                <img src={cat.photo} loading="lazy" className="cat-photo" />
                 <div className="cat-info" >
                     <p className="cat-name">{cat.name}</p>
                     <div className="breed-info">
-                        <img src={breedIcon}  className="breed-icon" />
+                        <img src={breedIcon} loading="lazy" className="breed-icon" />
                         <p className="cat-breed">{cat.breed}</p>
                     </div>
                     <div className="mood-info">
-                        <img src={moodIcon} className="mood-icon" />
+                        <img src={moodIcon} loading="lazy" className="mood-icon" />
                         <p className="cat-mood">{cat.temperment}</p>
                     </div>
                 </div>

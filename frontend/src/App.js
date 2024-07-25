@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div className="hero">
-        <img src={heroImg} />
+        <img src={heroImg} loading="lazy" />
         <div className="welcome">
           <h1>Sip purr-fect brews & cuddle adorable cats</h1>
           <p className='description-p'>Coffee, fluffy friends, and sweet boba await. Relax, sip, and enjoy your day with us!</p>
@@ -69,7 +69,7 @@ function App() {
         </div>
         <a href="/drinks" className="see-drinks">See all drinks</a>
       </div>
-      <div className="rooms-section">
+      <div className="rooms-section" loading="lazy">
         <div className="rooms-info">
           <h2 className="rooms-headline">Choose from 5 gorgeous rooms</h2>
           <a href="/rooms" className="see-rooms">See all rooms</a>
