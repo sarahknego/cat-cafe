@@ -17,5 +17,5 @@ I learned backend programming during the course of this project, and so was face
 
 ## How to install:
 1. Fork and clone this repository
-2. Npm install
-3. Npm start
+2. `npm install`
+3. `npm start`
