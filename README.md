@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+Premise: Kitty Corner Cafe is a website for a fictional cat cafe that displays the available cats and rooms for reservation, as well as the drinks for purchase. There is also a form to place reservations, and a page to view, edit, and delete existing reservations.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies used: JavaScript and React are primarily used within the frontend of this project, as well as HTML and CSS. SQL, DBeaver, Render, Vercel Blob, and Knex was used for the backend portions of this project. The API was designed and written in ExpressJS and tested in Postman.
 
-## Available Scripts
+What does it do: The database stores the information on the current offerings of cats, drinks, and rooms. An API connects the database to the frontend and displays the cats, drinks, and rooms on the homepage and in item and category specific pages. The website also records and displays reservations through the input form and editing pages. The API stores and retrieves the data as well as saves the changes to the information to the database. 
 
-In the project directory, you can run:
+Challenges faced: I learned backend programming during the course of this project, and so was faced with numerous challenges in that area as I got comfortable using the techniques. Debugging was particularly challenging, as I was learning a whole new programming language and thus had to find what went wrong and how to fix it. Additionally, I learned how to use resources like Vercel Blob and Render to store the information for the database. I also learned React for this project. I learned the intricacies of JSX and components, as well as React Router, useEffect, and useState. The edit reservation page took some time to get right, with the formatting and functionality of the delete, edit, and save buttons, as well as figuring out a way to make all of the information editable. The homepage took some work as well, trying to get rhe carousel and grid to work using the components of the cats and the drinks, as opposed to static images not connected to a backend.
 
-### `npm start`
+Where can be seen: https://cat-cafe-one.vercel.app/ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+How to install:
+-Fork and clone this repository
+-Npm install
+-Npm start
