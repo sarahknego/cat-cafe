@@ -71,7 +71,6 @@ async function submitForm({request}) {
   return submitReservation(submission);
 }
 
-
 const router = createBrowserRouter([
   {
     path: "/",

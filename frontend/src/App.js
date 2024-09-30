@@ -8,10 +8,11 @@ import prev from './images/prev.svg';
 import next from './images/next.svg';
 import {useLoaderData} from "react-router-dom";
 
-function App() {
+function App({setLoaded}) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const carousel = useRef(null);
   const data = useLoaderData();
+  
   return (
     <>
       <div className="hero">
@@ -74,9 +75,8 @@ function App() {
           <h2 className="rooms-headline">Choose from 5 gorgeous rooms</h2>
           <a href="/rooms" className="see-rooms">See all rooms</a>
         </div>
-      </div>
-    </>
-  );
-}
+      </div> 
+      </>
+      )}
 
 export default App;
